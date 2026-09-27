@@ -1,0 +1,4395 @@
+```html
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Scopri la cultura della Sardegna: storia, tradizioni, feste, Ardia di San Costantino a Sedilo, cucina, luoghi e patrimonio culturale.">
+
+    <meta name="keywords"
+          content="Sardegna, cultura sarda, Sedilo, Ardia San Costantino, tradizioni sarde, feste sarde, nuraghi, cucina sarda">
+
+    <meta name="author"
+          content="Sardegna Cultura">
+
+    <meta name="theme-color"
+          content="#0f766e">
+
+    <title>
+        Sardegna Cultura | Storia, Tradizioni e Feste
+    </title>
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #24323a;
+            background: #f7f8f5;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button {
+            font: inherit;
+        }
+
+
+        /* =====================================================
+           COLORI
+        ===================================================== */
+
+        :root {
+
+            --verde: #0f766e;
+            --verde-scuro: #115e59;
+            --verde-chiaro: #dff4ef;
+
+            --oro: #d99b28;
+
+            --rosso: #b83b32;
+
+            --blu: #176b87;
+
+            --scuro: #17313a;
+
+            --testo: #24323a;
+
+            --chiaro: #f7f8f5;
+
+            --bianco: #ffffff;
+
+            --bordo: #dce5e2;
+
+            --ombra:
+                0 12px 35px rgba(23, 49, 58, 0.10);
+
+        }
+
+
+        /* =====================================================
+           ACCESSIBILITÀ
+        ===================================================== */
+
+        .skip-link {
+
+            position: fixed;
+
+            top: -100px;
+            left: 20px;
+
+            z-index: 9999;
+
+            background: var(--scuro);
+            color: white;
+
+            padding: 12px 18px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 20px;
+        }
+
+        :focus-visible {
+
+            outline: 3px solid var(--oro);
+
+            outline-offset: 4px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,255,255,0.95);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid rgba(220,229,226,0.8);
+        }
+
+
+        .nav-container {
+
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding: 14px 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+        }
+
+
+        .logo {
+
+            text-decoration: none;
+
+            font-size: 1.35rem;
+
+            font-weight: 800;
+
+            color: var(--verde-scuro);
+        }
+
+
+        .logo span {
+            color: var(--oro);
+        }
+
+
+        .nav-menu {
+
+            list-style: none;
+
+            display: flex;
+
+            gap: 5px;
+
+            align-items: center;
+        }
+
+
+        .nav-menu a {
+
+            display: block;
+
+            text-decoration: none;
+
+            padding: 9px 11px;
+
+            border-radius: 8px;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            color: var(--scuro);
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-menu a:hover {
+
+            background: var(--verde-chiaro);
+
+            color: var(--verde-scuro);
+        }
+
+
+        .menu-button {
+
+            display: none;
+
+            border: none;
+
+            background: var(--verde);
+
+            color: white;
+
+            padding: 9px 12px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    rgba(10,45,49,0.62),
+                    rgba(10,45,49,0.74)
+                ),
+
+                url(
+                    "https://commons.wikimedia.org/wiki/Special:FilePath/Sardegna%20Cala%20Goloritz%C3%A9.jpg"
+                )
+
+                center / cover no-repeat;
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+            padding: 120px 22px 70px;
+
+            animation:
+                heroAppear 1s ease both;
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            border:
+                1px solid rgba(255,255,255,0.45);
+
+            border-radius: 50px;
+
+            background:
+                rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(8px);
+
+            font-size: 0.85rem;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 22px;
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(3rem, 7vw, 6rem);
+
+            line-height: 1;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+            color: #f3c866;
+        }
+
+
+        .hero p {
+
+            max-width: 720px;
+
+            margin: auto;
+
+            font-size:
+                clamp(1rem, 2vw, 1.25rem);
+
+            color:
+                rgba(255,255,255,0.94);
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            margin-top: 35px;
+        }
+
+
+        .button {
+
+            display: inline-block;
+
+            padding: 13px 21px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: 0.25s ease;
+        }
+
+
+        .button-primary {
+
+            background: white;
+
+            color: var(--verde-scuro);
+        }
+
+
+        .button-primary:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.18);
+        }
+
+
+        .button-secondary {
+
+            border:
+                1px solid rgba(255,255,255,0.55);
+
+            color: white;
+
+            background:
+                rgba(255,255,255,0.08);
+        }
+
+
+        .button-secondary:hover {
+
+            background:
+                rgba(255,255,255,0.18);
+        }
+
+
+        @keyframes heroAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(25px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* =====================================================
+           GENERALE
+        ===================================================== */
+
+        main {
+            overflow: hidden;
+        }
+
+
+        section {
+
+            padding:
+                95px 22px;
+        }
+
+
+        .container {
+
+            max-width: 1120px;
+
+            margin: auto;
+        }
+
+
+        .section-heading {
+
+            text-align: center;
+
+            max-width: 760px;
+
+            margin:
+                0 auto 55px;
+        }
+
+
+        .section-kicker {
+
+            color: var(--verde);
+
+            text-transform: uppercase;
+
+            font-size: 0.78rem;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-heading h2 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(2rem, 5vw, 3.4rem);
+
+            color: var(--scuro);
+
+            line-height: 1.15;
+
+            margin-bottom: 17px;
+        }
+
+
+        .section-heading p {
+            color: #5d6b70;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            background: white;
+        }
+
+
+        .intro-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+
+        .intro-text h3 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 2rem;
+
+            color: var(--scuro);
+
+            margin-bottom: 18px;
+        }
+
+
+        .intro-text p {
+
+            margin-bottom: 17px;
+
+            color: #53636a;
+        }
+
+
+        .intro-image {
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: var(--ombra);
+        }
+
+
+        .intro-image img {
+
+            width: 100%;
+
+            height: 450px;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+
+        .intro-image:hover img {
+            transform: scale(1.04);
+        }
+
+
+        /* =====================================================
+           DATI
+        ===================================================== */
+
+        .facts {
+
+            background:
+                var(--verde-scuro);
+
+            color: white;
+
+            border-radius: 0;
+        }
+
+
+        .facts-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+
+            text-align: center;
+        }
+
+
+        .fact {
+
+            padding: 28px;
+
+            border:
+                1px solid rgba(255,255,255,0.15);
+
+            border-radius: 16px;
+
+            background:
+                rgba(255,255,255,0.05);
+        }
+
+
+        .fact strong {
+
+            display: block;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 2.3rem;
+
+            color: #f3c866;
+
+            margin-bottom: 5px;
+        }
+
+
+        .fact span {
+
+            color:
+                rgba(255,255,255,0.84);
+        }
+
+
+        /* =====================================================
+           STORIA
+        ===================================================== */
+
+        .timeline {
+
+            position: relative;
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 2px;
+
+            background: #cddbd7;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .timeline-item {
+
+            width: 50%;
+
+            padding:
+                15px 35px;
+
+            position: relative;
+        }
+
+
+        .timeline-item:nth-child(odd) {
+
+            left: 0;
+
+            text-align: right;
+        }
+
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+
+        .timeline-card {
+
+            background: white;
+
+            border:
+                1px solid var(--bordo);
+
+            border-radius: 14px;
+
+            padding: 22px;
+
+            box-shadow:
+                0 8px 24px
+                rgba(23,49,58,0.06);
+        }
+
+
+        .timeline-card h3 {
+
+            color:
+                var(--verde-scuro);
+
+            margin-bottom: 8px;
+        }
+
+
+        .timeline-card p {
+
+            color: #5c6a70;
+
+            font-size: 0.95rem;
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            top: 28px;
+
+            width: 15px;
+
+            height: 15px;
+
+            background: var(--oro);
+
+            border:
+                4px solid #f7f8f5;
+
+            border-radius: 50%;
+
+            z-index: 2;
+        }
+
+
+        .timeline-item:nth-child(odd)
+        .timeline-dot {
+
+            right: -7px;
+        }
+
+
+        .timeline-item:nth-child(even)
+        .timeline-dot {
+
+            left: -7px;
+        }
+
+
+        /* =====================================================
+           CARDS
+        ===================================================== */
+
+        .tradizioni {
+            background: white;
+        }
+
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+
+        .card {
+
+            background: #fbfcfb;
+
+            border:
+                1px solid var(--bordo);
+
+            border-radius: 16px;
+
+            padding: 28px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow: var(--ombra);
+        }
+
+
+        .card-icon {
+
+            width: 52px;
+
+            height: 52px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 13px;
+
+            background:
+                var(--verde-chiaro);
+
+            font-size: 1.55rem;
+
+            margin-bottom: 18px;
+        }
+
+
+        .card h3 {
+
+            margin-bottom: 9px;
+
+            color: var(--scuro);
+        }
+
+
+        .card p {
+
+            color: #5c6a70;
+
+            font-size: 0.94rem;
+        }
+
+
+        /* =====================================================
+           GALLERIA
+        ===================================================== */
+
+        .gallery {
+
+            background: #eef3f0;
+        }
+
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr 0.8fr;
+
+            grid-auto-rows:
+                250px;
+
+            gap: 15px;
+        }
+
+
+        .gallery-item {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+
+            background: #d9e2df;
+        }
+
+
+        .gallery-item:first-child {
+            grid-row: span 2;
+        }
+
+
+        .gallery-item img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+
+        .gallery-item:hover img {
+            transform: scale(1.07);
+        }
+
+
+        .gallery-caption {
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding:
+                35px 18px 17px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.75)
+                );
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FESTE
+        ===================================================== */
+
+        .feste {
+            background: #f7f8f5;
+        }
+
+
+        .festival-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 22px;
+        }
+
+
+        .festival {
+
+            background: white;
+
+            border:
+                1px solid var(--bordo);
+
+            border-radius: 15px;
+
+            padding: 26px;
+
+            display: flex;
+
+            gap: 20px;
+
+            transition: 0.3s ease;
+        }
+
+
+        .festival:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow: var(--ombra);
+        }
+
+
+        .festival-date {
+
+            min-width: 75px;
+
+            height: 75px;
+
+            border-radius: 12px;
+
+            display: grid;
+
+            place-items: center;
+
+            background: #f8e8c2;
+
+            color: #7d5814;
+
+            font-weight: 800;
+
+            text-align: center;
+
+            font-size: 0.82rem;
+        }
+
+
+        .festival h3 {
+
+            margin-bottom: 7px;
+
+            color: var(--scuro);
+        }
+
+
+        .festival p {
+
+            color: #5c6a70;
+
+            font-size: 0.93rem;
+        }
+
+
+        /* =====================================================
+           ARDIA SEDILO
+        ===================================================== */
+
+        .ardia {
+
+            background: white;
+        }
+
+
+        .ardia-intro {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
+
+            margin-bottom: 65px;
+        }
+
+
+        .ardia-intro-text h3 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 2.2rem;
+
+            color: var(--scuro);
+
+            margin-bottom: 18px;
+        }
+
+
+        .ardia-intro-text p {
+
+            color: #53636a;
+
+            margin-bottom: 16px;
+        }
+
+
+        .ardia-main-image {
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: var(--ombra);
+        }
+
+
+        .ardia-main-image img {
+
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+        }
+
+
+        .ardia-facts {
+
+            background:
+                var(--verde-scuro);
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            margin-bottom: 70px;
+        }
+
+
+        .ardia-facts-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+
+        .ardia-fact {
+
+            text-align: center;
+
+            color: white;
+
+            padding: 20px;
+        }
+
+
+        .ardia-fact strong {
+
+            display: block;
+
+            color: #f3c866;
+
+            font-size: 1.6rem;
+
+            margin-bottom: 6px;
+        }
+
+
+        .ardia-fact span {
+
+            color:
+                rgba(255,255,255,0.8);
+        }
+
+
+        .ardia-gallery {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            grid-auto-rows:
+                270px;
+
+            gap: 15px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .ardia-photo {
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 15px;
+
+            background: #d9e2df;
+        }
+
+
+        .ardia-photo:first-child {
+
+            grid-column:
+                span 2;
+
+            grid-row:
+                span 2;
+        }
+
+
+        .ardia-photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.6s ease;
+        }
+
+
+        .ardia-photo:hover img {
+            transform: scale(1.06);
+        }
+
+
+        .ardia-photo-caption {
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding:
+                45px 16px 15px;
+
+            color: white;
+
+            font-weight: 700;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,0.78)
+                );
+        }
+
+
+        /* =====================================================
+           FONTI / CREDITI
+        ===================================================== */
+
+        .sources {
+
+            background: #eef3f0;
+        }
+
+
+        .sources-box {
+
+            max-width: 920px;
+
+            margin: auto;
+
+            background: white;
+
+            border:
+                1px solid var(--bordo);
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(23,49,58,0.05);
+        }
+
+
+        .sources-box h3 {
+
+            color: var(--scuro);
+
+            margin-bottom: 15px;
+
+            margin-top: 25px;
+        }
+
+
+        .sources-box h3:first-child {
+            margin-top: 0;
+        }
+
+
+        .sources-box ul {
+
+            padding-left: 22px;
+        }
+
+
+        .sources-box li {
+
+            margin-bottom: 12px;
+
+            color: #4f6066;
+        }
+
+
+        .sources-box p {
+
+            color: #5c6a70;
+
+            margin-bottom: 12px;
+        }
+
+
+        .sources-box a {
+
+            color:
+                var(--verde-scuro);
+
+            font-weight: 600;
+        }
+
+
+        .license {
+
+            display: inline-block;
+
+            margin-top: 5px;
+
+            font-size: 0.84rem;
+
+            color: #6a777c;
+        }
+
+
+        /* =====================================================
+           CUCINA
+        ===================================================== */
+
+        .cucina {
+
+            background: white;
+        }
+
+
+        .food-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 22px;
+        }
+
+
+        .food-card {
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            border:
+                1px solid var(--bordo);
+
+            background: white;
+
+            transition: 0.3s ease;
+        }
+
+
+        .food-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            box-shadow: var(--ombra);
+        }
+
+
+        .food-card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+        }
+
+
+        .food-placeholder {
+
+            height: 220px;
+
+            display: grid;
+
+            place-items: center;
+
+            color: white;
+
+            font-size: 4rem;
+        }
+
+
+        .food-content {
+
+            padding: 22px;
+        }
+
+
+        .food-content h3 {
+
+            color: var(--scuro);
+
+            margin-bottom: 8px;
+        }
+
+
+        .food-content p {
+
+            color: #5c6a70;
+
+            font-size: 0.94rem;
+        }
+
+
+        /* =====================================================
+           LUOGHI
+        ===================================================== */
+
+        .luoghi {
+
+            background: #eef3f0;
+        }
+
+
+        .places {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 22px;
+        }
+
+
+        .place {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            border:
+                1px solid var(--bordo);
+        }
+
+
+        .place h3 {
+
+            color:
+                var(--verde-scuro);
+
+            margin-bottom: 8px;
+        }
+
+
+        .place p {
+
+            color: #5c6a70;
+
+            margin-bottom: 15px;
+        }
+
+
+        .place a {
+
+            color:
+                var(--verde);
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+
+        .place a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
+           PRIVACY
+        ===================================================== */
+
+        .privacy {
+
+            background:
+                var(--scuro);
+
+            color: white;
+        }
+
+
+        .privacy-box {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .privacy h2 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 2rem;
+
+            margin-bottom: 15px;
+        }
+
+
+        .privacy p {
+
+            color:
+                rgba(255,255,255,0.78);
+
+            margin-bottom: 14px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background:
+                #0e252c;
+
+            color: white;
+
+            padding:
+                45px 22px;
+        }
+
+
+        .footer-container {
+
+            max-width: 1120px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 40px;
+        }
+
+
+        footer h3 {
+
+            margin-bottom: 12px;
+        }
+
+
+        footer p,
+        footer li {
+
+            color:
+                rgba(255,255,255,0.67);
+
+            font-size: 0.9rem;
+        }
+
+
+        footer ul {
+
+            list-style: none;
+        }
+
+
+        footer li {
+            margin-bottom: 7px;
+        }
+
+
+        footer a {
+
+            color:
+                rgba(255,255,255,0.82);
+
+            text-decoration: none;
+        }
+
+
+        footer a:hover {
+
+            color: white;
+
+            text-decoration: underline;
+        }
+
+
+        .copyright {
+
+            max-width: 1120px;
+
+            margin:
+                35px auto 0;
+
+            padding-top: 22px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+            color:
+                rgba(255,255,255,0.5);
+
+            font-size: 0.82rem;
+        }
+
+
+        /* =====================================================
+           ANIMAZIONI
+        ===================================================== */
+
+        .reveal {
+
+            opacity: 0;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+
+        .reveal.visible {
+
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .nav-menu {
+
+                position: absolute;
+
+                top: 70px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: white;
+
+                padding: 15px 22px;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                border-bottom:
+                    1px solid var(--bordo);
+
+                box-shadow:
+                    0 15px 25px
+                    rgba(0,0,0,0.07);
+            }
+
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+
+            .nav-menu a {
+                padding: 12px;
+            }
+
+
+            .menu-button {
+                display: block;
+            }
+
+
+            .intro-grid,
+            .ardia-intro {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .facts-grid,
+            .ardia-facts-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .cards,
+            .food-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+
+            .festival-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .ardia-gallery {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                grid-auto-rows:
+                    240px;
+            }
+
+
+            .ardia-photo:first-child {
+
+                grid-column:
+                    span 2;
+
+                grid-row:
+                    span 1;
+            }
+
+
+            .footer-container {
+
+                grid-template-columns:
+                    1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            section {
+
+                padding:
+                    70px 18px;
+            }
+
+
+            .hero-content {
+
+                padding-top:
+                    120px;
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    3.1rem;
+            }
+
+
+            .cards,
+            .food-grid,
+            .places,
+            .gallery-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .gallery-grid {
+
+                grid-auto-rows:
+                    230px;
+            }
+
+
+            .ardia-gallery {
+
+                grid-template-columns:
+                    1fr;
+
+                grid-auto-rows:
+                    250px;
+            }
+
+
+            .ardia-photo:first-child {
+
+                grid-column:
+                    span 1;
+            }
+
+
+            .timeline::before {
+
+                left: 10px;
+            }
+
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+
+                width: 100%;
+
+                left: 0;
+
+                text-align: left;
+
+                padding-left: 35px;
+
+                padding-right: 0;
+            }
+
+
+            .timeline-item:nth-child(odd)
+            .timeline-dot,
+            .timeline-item:nth-child(even)
+            .timeline-dot {
+
+                left: 3px;
+
+                right: auto;
+            }
+
+
+            .footer-container {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .festival {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .ardia-facts {
+
+                padding:
+                    20px;
+            }
+        }
+
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ACCESSIBILITÀ
+    ====================================================== -->
+
+    <a
+        class="skip-link"
+        href="#contenuto">
+
+        Vai al contenuto
+
+    </a>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header>
+
+        <nav
+            class="nav-container"
+            aria-label="Navigazione principale">
+
+
+            <a
+                href="#home"
+                class="logo">
+
+                Sardegna<span>.</span>
+
+            </a>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Apri il menu"
+                aria-expanded="false">
+
+                ☰
+
+            </button>
+
+
+            <ul
+                class="nav-menu"
+                id="navMenu">
+
+
+                <li>
+                    <a href="#storia">
+                        Storia
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#tradizioni">
+                        Tradizioni
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#feste">
+                        Feste
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#ardia">
+                        Ardia
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#cucina">
+                        Cucina
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#luoghi">
+                        Luoghi
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#fonti">
+                        Fonti
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main id="contenuto">
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section
+            class="hero"
+            id="home">
+
+
+            <div class="hero-content">
+
+
+                <span class="hero-label">
+
+                    Cultura • Storia • Tradizioni
+
+                </span>
+
+
+                <h1>
+
+                    Alla scoperta della
+                    <span>Sardegna</span>
+
+                </h1>
+
+
+                <p>
+
+                    Un viaggio tra antiche civiltà,
+                    tradizioni, feste popolari,
+                    sapori e paesaggi che raccontano
+                    l'identità di un'isola unica
+                    nel Mediterraneo.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+
+                    <a
+                        class="button button-primary"
+                        href="#storia">
+
+                        Inizia il viaggio
+
+                    </a>
+
+
+                    <a
+                        class="button button-secondary"
+                        href="#ardia">
+
+                        Scopri l'Ardia
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             INTRODUZIONE
+        ================================================== -->
+
+        <section class="intro">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+
+                        L'isola
+
+                    </div>
+
+
+                    <h2>
+
+                        Una cultura costruita
+                        nei secoli
+
+                    </h2>
+
+
+                    <p>
+
+                        La Sardegna conserva un patrimonio
+                        culturale caratterizzato da archeologia,
+                        tradizioni, musica, artigianato,
+                        gastronomia e feste popolari.
+
+                    </p>
+
+                </div>
+
+
+                <div class="intro-grid">
+
+
+                    <div class="intro-text reveal">
+
+
+                        <h3>
+
+                            Tra passato e presente
+
+                        </h3>
+
+
+                        <p>
+
+                            La storia della Sardegna è legata
+                            a numerose civiltà che hanno lasciato
+                            tracce importanti sul territorio.
+
+                        </p>
+
+
+                        <p>
+
+                            Tra queste spicca la civiltà nuragica,
+                            riconoscibile soprattutto attraverso
+                            i caratteristici nuraghi.
+
+                        </p>
+
+
+                        <p>
+
+                            Nel corso dei secoli l'isola ha sviluppato
+                            tradizioni differenti da zona a zona.
+                            Costumi, musica, artigianato, feste
+                            e cucina costituiscono ancora oggi
+                            elementi importanti dell'identità sarda.
+
+                        </p>
+
+
+                        <p>
+
+                            Questo sito è un progetto informativo
+                            dedicato alla scoperta di alcuni aspetti
+                            della cultura della Sardegna.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="intro-image reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Nuraghe%20Su%20Nuraxi%20-%20Barumini%20-%20Sardinia%20-%20Italy%20-%2029.jpg"
+                            alt="Il sito archeologico di Su Nuraxi a Barumini"
+                            loading="lazy">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DATI
+        ================================================== -->
+
+        <section class="facts">
+
+
+            <div class="container">
+
+
+                <div class="facts-grid">
+
+
+                    <div class="fact reveal">
+
+                        <strong>Nuraghi</strong>
+
+                        <span>
+                            Simboli dell'antica civiltà nuragica
+                        </span>
+
+                    </div>
+
+
+                    <div class="fact reveal">
+
+                        <strong>Tradizioni</strong>
+
+                        <span>
+                            Feste, musica, costumi e artigianato
+                        </span>
+
+                    </div>
+
+
+                    <div class="fact reveal">
+
+                        <strong>Identità</strong>
+
+                        <span>
+                            Un patrimonio culturale ancora vivo
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STORIA
+        ================================================== -->
+
+        <section id="storia">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Storia
+                    </div>
+
+
+                    <h2>
+                        Un passato millenario
+                    </h2>
+
+
+                    <p>
+                        Alcune tappe essenziali per comprendere
+                        la lunga storia dell'isola.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <h3>
+                                Civiltà nuragica
+                            </h3>
+
+                            <p>
+                                I nuraghi sono tra i simboli
+                                archeologici più caratteristici
+                                della Sardegna.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <h3>
+                                Fenici e Cartaginesi
+                            </h3>
+
+                            <p>
+                                Le coste dell'isola entrarono
+                                in contatto con importanti civiltà
+                                del Mediterraneo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <h3>
+                                Periodo romano
+                            </h3>
+
+                            <p>
+                                La Sardegna entrò nell'orbita romana,
+                                lasciando numerose testimonianze
+                                archeologiche.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <h3>
+                                Medioevo
+                            </h3>
+
+                            <p>
+                                I giudicati rappresentarono una fase
+                                importante nella storia politica
+                                e culturale dell'isola.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item reveal">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="timeline-card">
+
+                            <h3>
+                                Sardegna contemporanea
+                            </h3>
+
+                            <p>
+                                Oggi l'isola continua a valorizzare
+                                patrimonio, tradizioni, lingua,
+                                archeologia e cultura locale.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TRADIZIONI
+        ================================================== -->
+
+        <section
+            class="tradizioni"
+            id="tradizioni">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Tradizioni
+                    </div>
+
+
+                    <h2>
+                        Un patrimonio ancora vivo
+                    </h2>
+
+
+                    <p>
+                        Le tradizioni sarde sono diverse
+                        a seconda delle comunità
+                        e dei territori dell'isola.
+                    </p>
+
+                </div>
+
+
+                <div class="cards">
+
+
+                    <article class="card reveal">
+
+                        <div class="card-icon">
+                            🎭
+                        </div>
+
+                        <h3>
+                            Costumi tradizionali
+                        </h3>
+
+                        <p>
+                            Colori, tessuti, gioielli e caratteristiche
+                            differenti da un paese all'altro.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+                        <div class="card-icon">
+                            🎶
+                        </div>
+
+                        <h3>
+                            Musica
+                        </h3>
+
+                        <p>
+                            La musica tradizionale comprende forme vocali
+                            e strumenti tipici come le launeddas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+                        <div class="card-icon">
+                            🧵
+                        </div>
+
+                        <h3>
+                            Artigianato
+                        </h3>
+
+                        <p>
+                            Tessitura, ceramica, legno e altre
+                            lavorazioni artigianali fanno parte
+                            della cultura materiale dell'isola.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+                        <div class="card-icon">
+                            🐎
+                        </div>
+
+                        <h3>
+                            Tradizione equestre
+                        </h3>
+
+                        <p>
+                            Cavalli e cavalieri sono protagonisti
+                            di numerose manifestazioni tradizionali.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+                        <div class="card-icon">
+                            🎭
+                        </div>
+
+                        <h3>
+                            Maschere
+                        </h3>
+
+                        <p>
+                            Alcune comunità conservano antiche
+                            tradizioni legate alle maschere
+                            e ai riti del Carnevale.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+                        <div class="card-icon">
+                            🥁
+                        </div>
+
+                        <h3>
+                            Feste popolari
+                        </h3>
+
+                        <p>
+                            Le feste uniscono religione, musica,
+                            costumi, gastronomia e partecipazione
+                            della comunità.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             GALLERIA GENERALE
+        ================================================== -->
+
+        <section class="gallery">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Immagini
+                    </div>
+
+
+                    <h2>
+                        Volti e paesaggi della Sardegna
+                    </h2>
+
+
+                    <p>
+                        Una piccola galleria dedicata
+                        al patrimonio naturale e culturale
+                        dell'isola.
+                    </p>
+
+                </div>
+
+
+                <div class="gallery-grid">
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Sardegna%20Cala%20Goloritz%C3%A9.jpg"
+                            alt="Cala Goloritzé in Sardegna"
+                            loading="lazy">
+
+                        <div class="gallery-caption">
+                            Cala Goloritzé
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Folk%20Costume%20of%20Sardinia%20in%20Oliena%201.jpg"
+                            alt="Costume tradizionale di Oliena"
+                            loading="lazy">
+
+                        <div class="gallery-caption">
+                            Costume tradizionale
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Nuraghe%20Su%20Nuraxi%20-%20Barumini%20-%20Sardinia%20-%20Italy%20-%2029.jpg"
+                            alt="Su Nuraxi a Barumini"
+                            loading="lazy">
+
+                        <div class="gallery-caption">
+                            Su Nuraxi
+                        </div>
+
+                    </div>
+
+
+                    <div class="gallery-item reveal">
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Seadas.JPG"
+                            alt="Seadas della tradizione sarda"
+                            loading="lazy">
+
+                        <div class="gallery-caption">
+                            Cucina sarda
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FESTE
+        ================================================== -->
+
+        <section
+            class="feste"
+            id="feste">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Feste
+                    </div>
+
+
+                    <h2>
+                        Feste e tradizioni popolari
+                    </h2>
+
+
+                    <p>
+                        Alcune delle manifestazioni che fanno
+                        parte del patrimonio culturale
+                        e religioso della Sardegna.
+                    </p>
+
+                </div>
+
+
+                <div class="festival-grid">
+
+
+                    <article class="festival reveal">
+
+                        <div class="festival-date">
+
+                            MAG<br>
+                            1
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Sant'Efisio
+                            </h3>
+
+                            <p>
+                                Una delle manifestazioni religiose
+                                e popolari più conosciute della Sardegna,
+                                celebrata a Cagliari.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="festival reveal">
+
+                        <div class="festival-date">
+
+                            FEB
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Carnevale sardo
+                            </h3>
+
+                            <p>
+                                In diversi centri dell'isola il Carnevale
+                                presenta maschere, rituali e tradizioni
+                                locali differenti.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="festival reveal">
+
+                        <div class="festival-date">
+
+                            GIU
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Cavalcata Sarda
+                            </h3>
+
+                            <p>
+                                A Sassari una manifestazione dedicata
+                                ai costumi, ai cavalli e alle tradizioni
+                                regionali.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="festival reveal">
+
+                        <div class="festival-date">
+
+                            ESTATE
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Feste locali
+                            </h3>
+
+                            <p>
+                                Durante l'anno molti paesi organizzano
+                                feste patronali e manifestazioni
+                                dedicate alla cultura locale.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="festival reveal"
+                        style="
+                            border:2px solid #0f766e;
+                        ">
+
+
+                        <div
+                            class="festival-date"
+                            style="
+                                background:#dff4ef;
+                                color:#115e59;
+                            ">
+
+                            LUG
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Ardia di San Costantino
+                            </h3>
+
+                            <p>
+                                Sedilo — Provincia di Oristano.
+                                Una manifestazione tradizionale
+                                legata a San Costantino e caratterizzata
+                                dalla corsa dei cavalieri verso
+                                il santuario di Santu Antinu.
+                            </p>
+
+
+                            <a
+                                href="#ardia"
+                                style="
+                                    display:inline-block;
+                                    margin-top:10px;
+                                    color:#0f766e;
+                                    font-weight:700;
+                                    text-decoration:none;
+                                ">
+
+                                Scopri l'Ardia →
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ARDIA DI SAN COSTANTINO
+        ================================================== -->
+
+        <section
+            class="ardia"
+            id="ardia">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Sedilo • Oristano
+                    </div>
+
+
+                    <h2>
+                        L'Ardia di San Costantino
+                    </h2>
+
+
+                    <p>
+                        Una tradizione religiosa equestre
+                        profondamente legata alla comunità
+                        di Sedilo.
+                    </p>
+
+                </div>
+
+
+                <!-- INTRO -->
+
+                <div class="ardia-intro">
+
+
+                    <div class="ardia-intro-text reveal">
+
+
+                        <h3>
+                            Santu Antinu
+                        </h3>
+
+
+                        <p>
+                            L'Ardia di San Costantino si svolge
+                            a Sedilo, in provincia di Oristano,
+                            ed è legata alla devozione per
+                            San Costantino e al Santuario
+                            di Santu Antinu.
+                        </p>
+
+
+                        <p>
+                            Il momento centrale della manifestazione
+                            è rappresentato dalla corsa dei cavalieri
+                            lungo il percorso che conduce
+                            al santuario.
+                        </p>
+
+
+                        <p>
+                            L'Ardia mette insieme dimensione religiosa,
+                            tradizione equestre e partecipazione
+                            della comunità, diventando ogni anno
+                            uno degli appuntamenti più caratteristici
+                            della tradizione di Sedilo.
+                        </p>
+
+
+                        <p>
+                            La pagina fotografica dedicata permette
+                            di conoscere anche il santuario,
+                            il territorio e alcuni luoghi
+                            legati alla manifestazione.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="ardia-main-image reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Ardia.jpg"
+                            alt="Cavalieri durante l'Ardia di San Costantino a Sedilo"
+                            loading="lazy">
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATI ARDIA -->
+
+                <div
+                    class="ardia-facts">
+
+
+                    <div
+                        class="ardia-facts-grid">
+
+
+                        <div
+                            class="ardia-fact reveal">
+
+                            <strong>
+                                Sedilo
+                            </strong>
+
+                            <span>
+                                Provincia di Oristano
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="ardia-fact reveal">
+
+                            <strong>
+                                Santu Antinu
+                            </strong>
+
+                            <span>
+                                Santuario di San Costantino
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="ardia-fact reveal">
+
+                            <strong>
+                                Cavalieri
+                            </strong>
+
+                            <span>
+                                Protagonisti della corsa tradizionale
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- MOMENTI -->
+
+                <div
+                    class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        La tradizione
+                    </div>
+
+
+                    <h2>
+                        I protagonisti dell'Ardia
+                    </h2>
+
+
+                    <p>
+                        Religione, cavalli, cavalieri
+                        e territorio si incontrano
+                        durante la manifestazione.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="cards"
+                    style="margin-bottom:70px;">
+
+
+                    <article class="card reveal">
+
+
+                        <div class="card-icon">
+                            🐎
+                        </div>
+
+
+                        <h3>
+                            I cavalieri
+                        </h3>
+
+
+                        <p>
+                            I cavalieri sono i protagonisti
+                            della corsa e seguono il percorso
+                            tradizionale dell'Ardia.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+
+                        <div class="card-icon">
+                            ⛪
+                        </div>
+
+
+                        <h3>
+                            Il Santuario
+                        </h3>
+
+
+                        <p>
+                            Il Santuario di San Costantino,
+                            conosciuto anche come Santu Antinu,
+                            rappresenta il centro della celebrazione.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card reveal">
+
+
+                        <div class="card-icon">
+                            🏇
+                        </div>
+
+
+                        <h3>
+                            La corsa
+                        </h3>
+
+
+                        <p>
+                            La corsa a cavallo costituisce
+                            il momento più caratteristico
+                            dell'Ardia.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <!-- GALLERIA ARDIA -->
+
+                <div
+                    class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Galleria fotografica
+                    </div>
+
+
+                    <h2>
+                        Sedilo e Santu Antinu
+                    </h2>
+
+
+                    <p>
+                        Immagini dedicate all'Ardia,
+                        al santuario di San Costantino
+                        e al territorio di Sedilo.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="ardia-gallery">
+
+
+                    <!-- FOTO ARDIA -->
+
+                    <div
+                        class="ardia-photo reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Ardia.jpg"
+                            alt="Ardia di San Costantino a Sedilo"
+                            loading="lazy">
+
+
+                        <div class="ardia-photo-caption">
+
+                            Ardia di Sedilo
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SANTUARIO DALL'ALTO -->
+
+                    <div
+                        class="ardia-photo reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Vista%20dall%27alto%20Santuario%20di%20San%20Costantino%20in%20Sedilo.jpg"
+                            alt="Vista dall'alto del Santuario di San Costantino a Sedilo"
+                            loading="lazy">
+
+
+                        <div class="ardia-photo-caption">
+
+                            Il Santuario dall'alto
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SANTUARIO -->
+
+                    <div
+                        class="ardia-photo reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Santuario%20di%20San%20Costantino%20in%20Sedilo.jpg"
+                            alt="Santuario di San Costantino a Sedilo"
+                            loading="lazy">
+
+
+                        <div class="ardia-photo-caption">
+
+                            Santu Antinu
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CHIESA -->
+
+                    <div
+                        class="ardia-photo reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Chiesa%20del%20Santuario%20di%20San%20Costantino%20in%20Sedilo.jpg"
+                            alt="Chiesa del Santuario di San Costantino a Sedilo"
+                            loading="lazy">
+
+
+                        <div class="ardia-photo-caption">
+
+                            La chiesa del Santuario
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SA MUREdda -->
+
+                    <div
+                        class="ardia-photo reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Muredda%20Santuario%20di%20San%20Costantino%20in%20Sedilo.jpg"
+                            alt="Sa Muredda del Santuario di San Costantino a Sedilo"
+                            loading="lazy">
+
+
+                        <div class="ardia-photo-caption">
+
+                            Sa Muredda
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PANORAMA SEDILO -->
+
+                    <div
+                        class="ardia-photo reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Sedilo%2C%20panorama%20%2801%29.jpg"
+                            alt="Panorama di Sedilo"
+                            loading="lazy">
+
+
+                        <div class="ardia-photo-caption">
+
+                            Panorama di Sedilo
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CREDITS ARDIA -->
+
+                <div
+                    class="sources-box reveal">
+
+
+                    <h3>
+                        Crediti fotografici dell'Ardia
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Ardia.jpg
+                            </strong>
+
+                            — Cristiano Cani,
+                            Wikimedia Commons.
+
+                            <br>
+
+                            Licenza:
+                            <strong>
+                                CC BY 2.0
+                            </strong>
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Ardia.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina originale →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Vista dall'alto Santuario
+                                di San Costantino in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana.
+
+                            <br>
+
+                            Licenza:
+                            <strong>
+                                CC BY-SA 4.0
+                            </strong>
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Vista_dall%27alto_Santuario_di_San_Costantino_in_Sedilo.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina originale →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Santuario di San Costantino
+                                in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana.
+
+                            <br>
+
+                            Licenza:
+                            <strong>
+                                CC BY-SA 4.0
+                            </strong>
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Santuario_di_San_Costantino_in_Sedilo.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina originale →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Chiesa del Santuario
+                                di San Costantino in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana.
+
+                            <br>
+
+                            Licenza:
+                            <strong>
+                                CC BY-SA 4.0
+                            </strong>
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Chiesa_del_Santuario_di_San_Costantino_in_Sedilo.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina originale →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Sa Muredda Santuario
+                                di San Costantino in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana.
+
+                            <br>
+
+                            Licenza:
+                            <strong>
+                                CC BY-SA 4.0
+                            </strong>
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Sa_Muredda_Santuario_di_San_Costantino_in_Sedilo.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina originale →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Sedilo, panorama (01).jpg
+                            </strong>
+
+                            — Gianni Careddu.
+
+                            <br>
+
+                            Licenza:
+                            <strong>
+                                CC BY-SA 4.0
+                            </strong>
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Sedilo,_panorama_(01).jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina originale →
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                    <p style="margin-top:25px;">
+
+                        Altre fotografie relative al Santuario
+                        e a San Costantino sono disponibili nella
+                        categoria dedicata di Wikimedia Commons.
+
+                    </p>
+
+
+                    <p>
+
+                        <a
+                            href="https://commons.wikimedia.org/wiki/Category:San_Costantino_(Sedilo)"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Vedi la raccolta completa su Wikimedia Commons →
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CUCINA
+        ================================================== -->
+
+        <section
+            class="cucina"
+            id="cucina">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Gastronomia
+                    </div>
+
+
+                    <h2>
+                        I sapori dell'isola
+                    </h2>
+
+
+                    <p>
+                        La cucina sarda comprende preparazioni
+                        diverse a seconda delle aree e delle
+                        tradizioni familiari.
+                    </p>
+
+                </div>
+
+
+                <div class="food-grid">
+
+
+                    <article
+                        class="food-card reveal">
+
+
+                        <img
+                            src="https://commons.wikimedia.org/wiki/Special:FilePath/Seadas.JPG"
+                            alt="Seada tradizionale sarda"
+                            loading="lazy">
+
+
+                        <div class="food-content">
+
+
+                            <h3>
+                                Seadas
+                            </h3>
+
+
+                            <p>
+                                Un dolce composto da una sfoglia
+                                ripiena di formaggio e tradizionalmente
+                                servito con miele.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="food-card reveal">
+
+
+                        <div
+                            class="food-placeholder"
+                            style="
+                                background:
+                                linear-gradient(
+                                    135deg,
+                                    #0f766e,
+                                    #d99b28
+                                );
+                            ">
+
+                            🥖
+
+                        </div>
+
+
+                        <div class="food-content">
+
+
+                            <h3>
+                                Pane carasau
+                            </h3>
+
+
+                            <p>
+                                Pane sottile e croccante,
+                                legato soprattutto alla tradizione
+                                pastorale dell'interno della Sardegna.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="food-card reveal">
+
+
+                        <div
+                            class="food-placeholder"
+                            style="
+                                background:
+                                linear-gradient(
+                                    135deg,
+                                    #b83b32,
+                                    #d99b28
+                                );
+                            ">
+
+                            🍝
+
+                        </div>
+
+
+                        <div class="food-content">
+
+
+                            <h3>
+                                Pasta tradizionale
+                            </h3>
+
+
+                            <p>
+                                Culurgiones, malloreddus e altre
+                                preparazioni rappresentano una parte
+                                importante della gastronomia regionale.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LUOGHI
+        ================================================== -->
+
+        <section
+            class="luoghi"
+            id="luoghi">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Territorio
+                    </div>
+
+
+                    <h2>
+                        Luoghi da conoscere
+                    </h2>
+
+
+                    <p>
+                        Archeologia, città, montagne e coste
+                        contribuiscono alla grande varietà
+                        del paesaggio sardo.
+                    </p>
+
+                </div>
+
+
+                <div class="places">
+
+
+                    <article class="place reveal">
+
+
+                        <h3>
+                            Su Nuraxi — Barumini
+                        </h3>
+
+
+                        <p>
+                            Uno dei principali siti archeologici
+                            della civiltà nuragica e patrimonio
+                            culturale di grande importanza.
+                        </p>
+
+
+                        <a
+                            href="https://whc.unesco.org/en/list/833/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Informazioni UNESCO →
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="place reveal">
+
+
+                        <h3>
+                            Cagliari
+                        </h3>
+
+
+                        <p>
+                            Il capoluogo regionale conserva
+                            quartieri storici, monumenti,
+                            musei e testimonianze di diverse epoche.
+                        </p>
+
+
+                        <a
+                            href="https://www.sardegnaturismo.it/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Sardegna Turismo →
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="place reveal">
+
+
+                        <h3>
+                            Cala Goloritzé
+                        </h3>
+
+
+                        <p>
+                            Una delle località costiere più conosciute
+                            dell'isola, caratterizzata da acque limpide
+                            e paesaggio roccioso.
+                        </p>
+
+
+                        <a
+                            href="https://www.openstreetmap.org/search?query=Cala%20Goloritz%C3%A9"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Vedi sulla mappa →
+
+                        </a>
+
+                    </article>
+
+
+                    <article class="place reveal">
+
+
+                        <h3>
+                            Sedilo
+                        </h3>
+
+
+                        <p>
+                            Centro della Sardegna noto anche per
+                            il Santuario di San Costantino e
+                            per l'Ardia, una delle sue tradizioni
+                            più caratteristiche.
+                        </p>
+
+
+                        <a
+                            href="https://www.openstreetmap.org/search?query=Sedilo%20Sardegna"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Vedi Sedilo sulla mappa →
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FONTI
+        ================================================== -->
+
+        <section
+            class="sources"
+            id="fonti">
+
+
+            <div class="container">
+
+
+                <div class="section-heading reveal">
+
+
+                    <div class="section-kicker">
+                        Trasparenza
+                    </div>
+
+
+                    <h2>
+                        Fonti e crediti
+                    </h2>
+
+
+                    <p>
+                        Le immagini e le principali risorse esterne
+                        utilizzate nel progetto sono indicate qui.
+                    </p>
+
+                </div>
+
+
+                <div class="sources-box reveal">
+
+
+                    <h3>
+                        Immagini generali
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Cala Goloritzé
+                            </strong>
+
+                            — Wikimedia Commons.
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Sardegna_Cala_Goloritze.jpg"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina dell'immagine →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Su Nuraxi — Barumini
+                            </strong>
+
+                            — Wikimedia Commons.
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Wikimedia Commons →
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Seadas
+                            </strong>
+
+                            — Wikimedia Commons.
+
+                            <br>
+
+                            <a
+                                href="https://commons.wikimedia.org/wiki/File:Seadas.JPG"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Pagina dell'immagine →
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                    <h3>
+                        Immagini dell'Ardia di Sedilo
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <strong>
+                                Ardia.jpg
+                            </strong>
+
+                            — Cristiano Cani —
+                            CC BY 2.0.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Vista dall'alto Santuario
+                                di San Costantino in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana —
+                            CC BY-SA 4.0.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Santuario di San Costantino
+                                in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana —
+                            CC BY-SA 4.0.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Chiesa del Santuario
+                                di San Costantino in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana —
+                            CC BY-SA 4.0.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Sa Muredda Santuario
+                                di San Costantino in Sedilo.jpg
+                            </strong>
+
+                            — Pietro Di Fontana —
+                            CC BY-SA 4.0.
+
+                        </li>
+
+
+                        <li>
+
+                            <strong>
+                                Sedilo, panorama (01).jpg
+                            </strong>
+
+                            — Gianni Careddu —
+                            CC BY-SA 4.0.
+
+                        </li>
+
+                    </ul>
+
+
+                    <h3>
+                        Risorse
+                    </h3>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <a
+                                href="https://www.sardegnaturismo.it/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Sardegna Turismo
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="https://whc.unesco.org/en/list/833/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                UNESCO — Su Nuraxi di Barumini
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="https://commons.wikimedia.org/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                Wikimedia Commons
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="https://www.openstreetmap.org/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                OpenStreetMap
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+
+                    <p style="margin-top:25px;">
+
+                        Le immagini pubblicate su questo sito
+                        sono accompagnate dall'indicazione
+                        dell'autore e della licenza quando richiesto
+                        dalla relativa pagina della fonte.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PRIVACY
+        ================================================== -->
+
+        <section class="privacy">
+
+
+            <div class="privacy-box">
+
+
+                <h2>
+                    Privacy e funzionamento del sito
+                </h2>
+
+
+                <p>
+                    Questo sito è un progetto statico realizzato
+                    in HTML, CSS e JavaScript.
+                </p>
+
+
+                <p>
+                    Il codice presente in questa pagina non contiene
+                    sistemi di registrazione, commenti o moduli
+                    per la raccolta volontaria di dati personali.
+                </p>
+
+
+                <p>
+                    Il sito non utilizza, nel codice presente,
+                    sistemi di analisi statistica o pubblicità
+                    personalizzata.
+                </p>
+
+
+                <p>
+                    Alcune immagini vengono caricate da Wikimedia Commons
+                    tramite collegamenti esterni. Visitando risorse
+                    esterne si applicano le condizioni dei relativi servizi.
+                </p>
+
+
+                <p>
+                    Questa sezione è una nota informativa per un progetto
+                    statico e non sostituisce una consulenza legale nel
+                    caso in cui il sito venga successivamente arricchito
+                    con newsletter, analytics, pubblicità, moduli
+                    o altri servizi.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <div>
+
+
+                <h3>
+                    Sardegna.
+                </h3>
+
+
+                <p>
+                    Un progetto digitale dedicato alla cultura,
+                    alla storia, alle tradizioni e alle feste
+                    della Sardegna.
+                </p>
+
+            </div>
+
+
+            <div>
+
+
+                <h3>
+                    Navigazione
+                </h3>
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="#storia">
+                            Storia
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#tradizioni">
+                            Tradizioni
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#feste">
+                            Feste
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#ardia">
+                            Ardia di Sedilo
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#cucina">
+                            Cucina
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+
+                <h3>
+                    Risorse
+                </h3>
+
+
+                <ul>
+
+
+                    <li>
+                        <a href="#fonti">
+                            Fonti e crediti
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="https://www.sardegnaturismo.it/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Sardegna Turismo
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a
+                            href="https://commons.wikimedia.org/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Wikimedia Commons
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 — Sardegna Cultura.
+            Contenuti esterni attribuiti ai rispettivi
+            autori e alle relative fonti.
+
+        </div>
+
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* ==========================================
+           MENU MOBILE
+        ========================================== */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+
+        menuButton.addEventListener(
+            "click",
+            function () {
+
+
+                const isOpen =
+                    navMenu.classList.toggle("active");
+
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+
+                menuButton.setAttribute(
+                    "aria-label",
+                    isOpen
+                        ? "Chiudi il menu"
+                        : "Apri il menu"
+                );
+
+            }
+        );
+
+
+        /* ==========================================
+           CHIUSURA MENU
+        ========================================== */
+
+        document
+            .querySelectorAll(".nav-menu a")
+            .forEach(function(link) {
+
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+
+                        navMenu.classList.remove(
+                            "active"
+                        );
+
+
+                        menuButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        menuButton.setAttribute(
+                            "aria-label",
+                            "Apri il menu"
+                        );
+
+                    }
+                );
+
+            });
+
+
+        /* ==========================================
+           ANIMAZIONI
+        ========================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+                function(entries) {
+
+
+                    entries.forEach(
+                        function(entry) {
+
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            }
+
+                        }
+                    );
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+
+        revealElements.forEach(
+            function(element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+        /* ==========================================
+           ANNO AUTOMATICO
+        ========================================== */
+
+        const copyright =
+            document.querySelector(".copyright");
+
+
+        copyright.innerHTML =
+            copyright.innerHTML.replace(
+                "2026",
+                new Date().getFullYear()
+            );
+
+
+    </script>
+
+
+</body>
+
+</html>
+```
